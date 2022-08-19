@@ -1,14 +1,9 @@
-
+import React from 'react'
 import './App.css';
 
 function App() {
   return (
-    <div>
-
-          Learn React
-        
-     
-    </div>
+  <h1 style={{textDecoration:"underline"}}>app</h1>
   );
 }
 

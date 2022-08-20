@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-  <h1 style={{textDecoration:"underline"}}>app</h1>
+  <h1 style={{textDecoration:"underline text-bold"}}>app of reat</h1>
   );
 }
 

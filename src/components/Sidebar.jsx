@@ -5,7 +5,6 @@ import { MdOutlineCancel} from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 
-import {links} from '../data/brightstar';
 const Sidebar = () => {
 const activeMenu=true;
 
@@ -14,8 +13,8 @@ const activeMenu=true;
            {activeMenu && (<>
         <div className="flex justify-between items-center">
         <Link to="/" onClick={() =>{}} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tacking-tight dark:text-white text-slate-900"><SiShopware/> <span> Shoppy</span></Link>
-        <TooltipComponent content="Menu"  position="BottomCenter">
-                    <button >
+        <TooltipComponent content="menu"  position="BottomCenter">
+                    <button style={{color:"blue"}}>
                     <MdOutlineCancel/>
                     </button>
         </TooltipComponent >

@@ -19,7 +19,7 @@ const normalLink ='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md t
         <Link to="/" onClick={() => setActiveMenu(false)} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tacking-tight dark:text-white text-slate-900"><SiShopware/> <span> Shoppy</span></Link>
         <TooltipComponent content="menu"  position="BottomCenter">
                     <button type="button" 
-                    onClick={() => setActiveMenu ((prevActiveMenu) => prevActiveMenu)}
+                    onClick={() => setActiveMenu ((prevActiveMenu) => !prevActiveMenu)}
                     className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden">
                     <MdOutlineCancel/>
                     </button>

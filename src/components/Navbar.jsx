@@ -13,9 +13,9 @@ const NavButton = ({title, customFunc, icon, color, dotColor }) =>(
     <TooltipComponent content= {title} position="BottomCenter" >
             <button type="button" onClick={customFunc} style={{color}}
             className="relative text-xl rounded-full p-3 hover:bg-light-grey">
-                <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2">
+                <span style={{ background: dotColor }} className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"/>
                 {icon}
-                </span>
+               
             </button>
     </TooltipComponent>
 )
@@ -31,15 +31,15 @@ const handleResize =() => setScreenSize
   handleResize();
 
   return () =>window.removeEventListener('resize', handleResize);
-}, [setScreenSize]);
+}, );
 
 useEffect(() => {
     if (screenSize <= 900) {
-        setActiveMenu(false);
+    setActiveMenu(false);
     } else {
         setActiveMenu(true);
     }
-},[screenSize]);
+},[screenSize,setActiveMenu]);
 
     return (
         <div className="flex justify-between p-2 md:mx-6 relative">

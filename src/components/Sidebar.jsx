@@ -22,7 +22,7 @@ const normalLink ='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md t
         <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
            {activeMenu && (<>
         <div className="flex justify-between items-center">
-        <Link to="/" onClick={() => setActiveMenu(false)} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tacking-tight dark:text-white text-slate-900"><SiShopware/> <span> Shoppy</span></Link>
+        <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tacking-tight dark:text-white text-slate-900"><SiShopware/> <span> Shoppy</span></Link>
         <TooltipComponent content="menu"  position="BottomCenter">
                     <button type="button" 
                     onClick={() => setActiveMenu ((prevActiveMenu) => !prevActiveMenu)}
@@ -41,7 +41,7 @@ const normalLink ='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md t
                    <NavLink 
                    to={`/${link.name}`}
                    key={link.name}
-                   onCLick={() => {}}
+                   onCLick={handleCloseSideBar}
                    className={({isActive}) =>isActive ? activeLink : normalLink}
                    >
 {link.icon}
